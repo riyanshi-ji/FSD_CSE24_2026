@@ -52,4 +52,8 @@ function loginHandler(username,password,clbk){
     }
 }
 // loginHandler("riya_ji","12345",login) // with correct details
-loginHandler("riya","12345",login) //with incorrect details
+// loginHandler("riya","12345",login) //with incorrect details
+
+console.log("one");
+setTimeout(()=>{console.log("two")},1000)
+console.log("three");
