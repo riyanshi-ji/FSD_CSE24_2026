@@ -55,5 +55,8 @@ function loginHandler(username,password,clbk){
 // loginHandler("riya","12345",login) //with incorrect details
 
 console.log("one");
-setTimeout(()=>{console.log("two")},1000)
+for(i=0;i<1000;i++){
+    console.log("i="+i);
+}
+//setTimeout(()=>{console.log("two")},1000) (asynchronous function)
 console.log("three");
