@@ -54,9 +54,43 @@ function loginHandler(username,password,clbk){
 // loginHandler("riya_ji","12345",login) // with correct details
 // loginHandler("riya","12345",login) //with incorrect details
 
-console.log("one");
-for(i=0;i<1000;i++){
-    console.log("i="+i);
+// console.log("one");
+// for(i=0;i<1000;i++){
+//     console.log("i="+i);
+// }
+//  setTimeout(()=>{console.log("two")},1000) (asynchronous function)
+//  console.log("three");
+
+
+const container=document.getElementById("container");
+const button=document.getElementById("btn");
+    const h1=document.createElement('h1');
+    console.log(h1);
+    h1.innerText="ABESEC";
+    const loader=document.createElement('h2');
+    container.appendChild(loader);
+    const img=document.createElement('img');
+// console.log(container);
+// console.log(button);
+function ping(){
+    // alert("server ping")
+    try{
+    container.innerHTML='<h2 style="color:red">Welcome to DOM</h2>';
+    h1.style.backgroundColor="yellow";
+    h1.style.color="blue";
+    container.appendChild(h1);
+    img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn7MzvDzec0gUA_h4mHK2IOxXCce7oMpnKqR3dP5FwAw&s=10";
+    img.setAttribute("width",200);
+    img.setAttribute("height",200);
+    container.appendChild(img);
 }
-//setTimeout(()=>{console.log("two")},1000) (asynchronous function)
-console.log("three");
+    catch(err){
+        loader.innerHTML='<h2 style="color:red">Error: '+err+'</h2>';
+    }
+    finally{
+        loader.innerHTML='<h2>Loaded!</h2>';
+
+}
+}
+
+button.addEventListener('click',ping);
