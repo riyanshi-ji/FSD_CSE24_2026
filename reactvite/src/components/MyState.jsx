@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 function MyState() {
   const [counter, setCount] = useState(10)
   const [color, setColor] = useState('red')
@@ -42,3 +41,4 @@ function MyState() {
 }
 
 export default MyState
+
