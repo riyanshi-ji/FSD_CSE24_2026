@@ -14,6 +14,7 @@ function ImageManipulation() {
   const[red,setRed]=useState(0);
   const[green,setGreen]=useState(0);
   const[blue,setBlue]=useState(0);
+  const[catAngle,setCatAngle]=useState(30);
 
   function decreaseHeight() {
     setHeight(height - 20);
@@ -30,6 +31,9 @@ function ImageManipulation() {
     setRed(Math.random()*255);
     setGreen(Math.random()*255);
     setBlue(Math.random()*255);
+  }
+  function ImageRotate(){
+    setCatAngle(catAngle+30);
   }
 
   return (
@@ -49,6 +53,7 @@ function ImageManipulation() {
           src={image}
           height={height}
           width={width}
+          style={{ transform: `rotate(${catAngle}deg)` }}
         />
       </div>
 
@@ -72,6 +77,10 @@ function ImageManipulation() {
 
         <button onClick={changeBGcolor}>
           Change Background Color
+        </button>
+
+        <button onClick={ImageRotate}>
+          Rotate Image
         </button>
 
       </div>
